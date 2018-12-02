@@ -1,62 +1,1 @@
-# Created by .ignore support plugin (hsz.mobi)
-### mvn with spring boot template
-/target/
-.mvn
-mvnw
-mvnw.cmd
-
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-### NetBeans ###
-/nbproject/private/
-/build/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-
-*#
-*.jar
-*.sw?
-*~
-.#*
-.*.md.html
-.DS_Store
-.gradle
-.metadata
-.recommenders
-/build
-/code
-MANIFEST.MF
-_site/
-activemq-data
-bin
-build
-build.log
-dependency-reduced-pom.xml
-dump.rdb
-interpolated*.xml
-lib/
-manifest.yml
-overridedb.*
-settings.xml
-transaction-logs
-.flattened-pom.xml
-secrets.yml
-.gradletasknamecache
-src/main/resources/static/
-src/main/resources/templates/
-
+# Created by .ignore support plugin (hsz.mobi)### mvn with spring boot template/target/.mvnmvnwmvnw.cmd### STS ###.apt_generated.classpath.factorypath.project.settings.springBeans.sts4-cache### IntelliJ IDEA ###.idea*.iws*.iml*.ipr### NetBeans ###/nbproject/private//build//nbbuild//dist//nbdist//.nb-gradle/*#*.jar*.sw?*~.#*.*.md.html.DS_Store.gradle.metadata.recommenders/build/codeMANIFEST.MF_site/activemq-databinbuildbuild.logdependency-reduced-pom.xmldump.rdbinterpolated*.xmllib/manifest.ymloverridedb.*settings.xmltransaction-logs.flattened-pom.xmlsecrets.yml.gradletasknamecachesrc/main/resources/static/src/main/resources/templates/
