@@ -34,6 +34,16 @@ public class Hashtable implements HashTableSignature {
 
     @Override
     public boolean containsKey(String key) {
+        int bucket_id = getBucket(key);
+        if (this.buckets[bucket_id] != null) {
+            HashNode head = this.buckets[bucket_id];
+            while (null != head) {
+                if (head.getKey() == key) {
+                    return true;
+                }
+                head = head.getNext();
+            }
+        }
         return false;
     }
 
@@ -74,7 +84,33 @@ public class Hashtable implements HashTableSignature {
 
     @Override
     public String remove(String key) {
-        return null;
+        int bucket_id = getBucket(key);
+        HashNode node = buckets[bucket_id];
+        if (this.buckets[bucket_id] == null) {
+            throw new RuntimeException("removing a key not in designated bucket");
+        }
+        HashNode previousNode = null;
+        while (null != node) {
+            String returnVal;
+            if (node.getKey() == key) {
+                returnVal = node.getValue();
+                // at this point we find the target;
+                if (previousNode == null) {
+                    // we find head as the target
+                    buckets[bucket_id] = null;
+                } else if (null != node.getNext()) {
+                    // target have following node
+                    previousNode.setNext(node.getNext());
+                } else {
+                    //target is the last element of this bucket
+                    previousNode.setNext(null);
+                }
+                return returnVal;
+            }
+            previousNode = node;
+            node = node.getNext();
+        }
+        throw new RuntimeException("removing a key not in designated bucket");
     }
 
     class HashNode {
