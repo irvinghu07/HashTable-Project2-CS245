@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Hashtable.iml" filepath="$PROJECT_DIR$/Hashtable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HashTable-Project2-CS245.iml" filepath="$PROJECT_DIR$/HashTable-Project2-CS245.iml" />
     </modules>
   </component>
 </project>
