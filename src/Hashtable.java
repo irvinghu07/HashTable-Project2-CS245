@@ -24,13 +24,6 @@ public class Hashtable implements HashTableSignature {
         return key.hashCode() % num_buckets;
     }
 
-    public static void main(String[] args) {
-        String a = "hello world";
-        String b = "hello world";
-        System.out.println(a.equals(b));
-        System.out.println(a.hashCode());
-        System.out.println(b.hashCode());
-    }
 
     @Override
     public boolean containsKey(String key) {
