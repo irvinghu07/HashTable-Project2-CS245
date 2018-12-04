@@ -1,14 +1,16 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Hashtable implements HashTableSignature {
 
-    private static int DEFAULT_NUMBER_OF_BUCKETS = 2048;
+    private static int DEFAULT_NUMBER_OF_BUCKETS = 314526;
     //    size of the table
     private int num_buckets;
 
     //    numebr of items in the Hashtable
     private int size;
 
-    //    private ArrayList<HashNode> buckets;
-    private HashNode[] buckets;
+    private ArrayList<HashNode> buckets;
 
     public Hashtable() {
         this(DEFAULT_NUMBER_OF_BUCKETS);
@@ -17,19 +19,19 @@ public class Hashtable implements HashTableSignature {
     public Hashtable(int num_buckets) {
         this.num_buckets = num_buckets;
         this.size = 0;
-        this.buckets = new HashNode[num_buckets];
+        this.buckets = new ArrayList<>(Collections.nCopies(num_buckets, null));
     }
 
     private int getBucket(String key) {
-        return key.hashCode() % num_buckets;
+        return Math.abs(key.hashCode()) % num_buckets;
     }
 
 
     @Override
     public boolean containsKey(String key) {
         int bucket_id = getBucket(key);
-        if (this.buckets[bucket_id] != null) {
-            HashNode head = this.buckets[bucket_id];
+        if (this.buckets.get(bucket_id) != null) {
+            HashNode head = this.buckets.get(bucket_id);
             while (null != head) {
                 if (head.getKey() == key) {
                     return true;
@@ -43,7 +45,7 @@ public class Hashtable implements HashTableSignature {
     @Override
     public String get(String key) {
         int bucket_id = getBucket(key);
-        HashNode head = this.buckets[bucket_id];
+        HashNode head = this.buckets.get(bucket_id);
         if (null == head) {
             return null;
         } else {
@@ -60,26 +62,29 @@ public class Hashtable implements HashTableSignature {
     @Override
     public void put(String key, String value) {
         int bucket_id = getBucket(key);
-        HashNode node = buckets[bucket_id];
-        while (null != node) {
-            if (key == node.key) {
-                node.value = value;
-                return;
+        HashNode node = this.buckets.get(bucket_id);
+        if (null == node) {
+            HashNode newNode = new HashNode(key, value);
+            this.buckets.set(bucket_id, newNode);
+            this.size++;
+        } else {
+            while (null != node.getNext()) {
+                if (key == node.key) {
+                    node.value = value;
+                    return;
+                }
+                node = node.next;
             }
-            node = node.next;
+            node.setNext(new HashNode(key, value));
+            this.size++;
         }
-
-//        if reach this point, then the bucket is either empty or there is no match key related!! node == null now
-        HashNode newNode = new HashNode(key, value);
-        buckets[bucket_id] = newNode;
-        this.size++;
     }
 
     @Override
     public String remove(String key) {
         int bucket_id = getBucket(key);
-        HashNode node = buckets[bucket_id];
-        if (this.buckets[bucket_id] == null) {
+        HashNode node = this.buckets.get(bucket_id);
+        if (this.buckets.get(bucket_id) == null) {
             throw new RuntimeException("removing a key not in designated bucket");
         }
         HashNode previousNode = null;
@@ -90,7 +95,7 @@ public class Hashtable implements HashTableSignature {
                 // at this point we find the target;
                 if (previousNode == null) {
                     // we find head as the target
-                    buckets[bucket_id] = null;
+                    this.buckets.set(bucket_id, null);
                 } else if (null != node.getNext()) {
                     // target have following node
                     previousNode.setNext(node.getNext());
@@ -98,6 +103,7 @@ public class Hashtable implements HashTableSignature {
                     //target is the last element of this bucket
                     previousNode.setNext(null);
                 }
+                this.size--;
                 return returnVal;
             }
             previousNode = node;
