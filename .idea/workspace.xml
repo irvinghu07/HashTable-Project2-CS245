@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78db1c35-9f99-401e-b1e2-ea7dc3ff5ca6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HashTable-Project2-CS245/Hashtable$HashNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HashTable-Project2-CS245/Hashtable$HashNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HashTable-Project2-CS245/Hashtable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HashTable-Project2-CS245/Hashtable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HashTable-Project2-CS245/SelfTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HashTable-Project2-CS245/SelfTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hashtable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hashtable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SelfTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HashTable-Project2-CS245/SelfTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assignment2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment2Test.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Assignment2Test.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Assignment2Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Assignment2Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="132" selection-start-line="132" selection-end-line="132" />
+            <state relative-caret-position="141">
+              <caret line="102" column="30" lean-forward="true" selection-start-line="102" selection-start-column="30" selection-end-line="102" selection-end-column="30" />
               <folding>
                 <element signature="e#2758#2766#0" expanded="true" />
               </folding>
@@ -31,7 +27,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hashtable.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Hashtable.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Hashtable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1638">
@@ -65,10 +61,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1280" />
-    <option name="height" value="777" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -102,6 +97,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="http.proxy" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -189,15 +189,15 @@
       <option name="presentableId" value="Default" />
       <updated>1543742611736</updated>
       <workItem from="1543742614021" duration="1158000" />
-      <workItem from="1543890773448" duration="5888000" />
+      <workItem from="1543890773448" duration="6944000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7046000" />
+    <option name="totallyTimeSpent" value="8102000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="777" extended-state="6" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -211,16 +211,16 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.7235294" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.88529414" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2536349" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2536349" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.41029412" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.38482758" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -274,16 +274,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Assignment2Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="132" selection-start-line="132" selection-end-line="132" />
-          <folding>
-            <element signature="e#2758#2766#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SelfTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -302,6 +292,19 @@
             <element signature="imports" expanded="true" />
             <element signature="e#641#642#0" expanded="true" />
             <element signature="e#702#703#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Assignment2Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="102" column="30" lean-forward="true" selection-start-line="102" selection-start-column="30" selection-end-line="102" selection-end-column="30" />
+          <folding>
+            <element signature="e#2758#2766#0" expanded="true" />
           </folding>
         </state>
       </provider>
